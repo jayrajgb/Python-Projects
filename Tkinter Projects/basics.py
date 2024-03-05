@@ -2,7 +2,7 @@ import tkinter
 from tkinter import *
 
 root = Tk()
-root.title("Basics of Tkinter")
+root.title("DICOM Image Encryption/Decryption System")
 
 root.geometry("960x480")
 
@@ -14,6 +14,14 @@ root.geometry("960x480")
 # photo = ImageTk.PhotoImage(img)
 # label = Label(image=photo)
 # label.pack()
+
+
+### Extra Tips
+# root.wm_iconbitmap("1.ico") --- set icon
+# root.configure(background = "grey") --- set bg
+# root.winfo_screenwidth() --- get screen width
+# root.winfo_screenheight() --- get screen height
+# Button(root,command = root.destroy).pack() --- close the root
 
 
 ### Widgets
@@ -130,6 +138,50 @@ root.geometry("960x480")
 # else:
 #   msg = "Meheheh...ssi"
 # tmsg.showinfo("Info", msg)
+
+
+### Listbox
+# lbx = Listbox(root)
+# lbx.pack()
+# lbx.insert(ACTIVE, "Adds the list item above selected list item")
+# lbx.insert(END, "Adds the list item at the end of the list")
+
+
+### Scrollbar
+# widget(yscrollcommand = scrollbar.set) --- to connect to a widget
+# scrollbar.config(command = widget.yview)
+# text = Text(root, yscrollcommand = scrollbar.set)
+# text.pack(fill = BOTH)
+# scrollbar.config(command = text.yview)
+
+
+### Classes and Objects
+# class GUI(Tk):                      --- GUI is the class, self is the root
+#     def __int__(self):              --- Constructor
+#         super().__init__()
+#         self.geometry("960x480")
+#
+#     def click(self):
+#         print("Button clicked")
+#
+#     def addbutton(self, inptext):
+#         Button(text=inptext, command=self.click).pack()
+#
+# if __name__ == '__main__':
+#     window = GUI()                  --- window is the object, and is the root
+#     window.addbutton("Click me")
+#
+#     window.mainloop()
+
+
+### Filedialog
+# from tkinter.filedialog import askopenfilename, asksaveasfilename
+# def openFile():
+#     global file
+#     file = askopenfilename(defaultextension=".txt", filetypes=[("All Files", "*.*", "*.text")]
+
+
+
 
 
 root.mainloop()
